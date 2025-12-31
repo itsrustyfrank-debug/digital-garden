@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function HomePage() {
   return (
@@ -8,10 +9,8 @@ export default function HomePage() {
 
         <div className="leading-relaxed space-y-6 text-lg">
           <p>
-            Welcome to my digital garden. Here you will find 
-            a collection of notes, thoughts, and reference 
-            material arranged for reading and reflection 
-            rather than chronological consumption.
+            Welcome to my digital garden. Here you will find a collection of notes, thoughts, and reference material
+            arranged for reading and reflection rather than chronological consumption.
           </p>
 
           <p>
@@ -22,8 +21,9 @@ export default function HomePage() {
 
           <p>
             The organization is intentionally simple: an alphabetical index serves as the primary navigation. Browse by
-            topic, follow cross-references, or read linearly. There are no feeds, no comments, no analytics—just text
-            and the space to think.
+            topic, follow cross-references, or read linearly. There are no feeds, no comments, no analytics. Just an
+            ever-growing assortment of my latest fixations, cultivated for your enjoyment. In the wise words of Joe
+            Dirt, "Life's a garden, dig it."
           </p>
         </div>
 
@@ -35,6 +35,11 @@ export default function HomePage() {
             Browse the index
             <span aria-hidden="true">→</span>
           </Link>
+        </div>
+
+        <div className="mt-16 pt-8 flex flex-col items-start">
+          <p className="text-lg text-foreground/80 italic mb-4">Warmly,</p>
+          <Image src="/signature.png" alt="Rusty Frank signature" width={240} height={80} className="opacity-90" />
         </div>
       </article>
     </main>
