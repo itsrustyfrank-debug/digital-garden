@@ -27,6 +27,11 @@ export default function HomePage() {
           </p>
         </div>
 
+        <div className="mt-16 pt-8 flex flex-col items-start">
+          <p className="text-lg text-foreground/80 italic mb-4">Warmly,</p>
+          <Image src="/signature.png" alt="Rusty Frank signature" width={240} height={80} className="opacity-90" />
+        </div>
+
         <div className="mt-12 pt-8 border-t border-border">
           <Link
             href="/index"
@@ -37,10 +42,6 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="mt-16 pt-8 flex flex-col items-start">
-          <p className="text-lg text-foreground/80 italic mb-4">Warmly,</p>
-          <Image src="/signature.png" alt="Rusty Frank signature" width={240} height={80} className="opacity-90" />
-        </div>
       </article>
     </main>
   )
