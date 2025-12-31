@@ -75,8 +75,8 @@
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
-  --font-serif: "Charter", "Iowan Old Style", "Georgia", "serif";
+  /* Updated font families to match loaded fonts: Lora for serif, Inter for sans */
+  --font-serif: "Lora", "Iowan Old Style", "Georgia", "serif";
   --font-sans: "Inter", "system-ui", "sans-serif";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -122,5 +122,35 @@
   }
   body {
     @apply bg-background text-foreground font-serif;
+  }
+}
+
+/* Added premium pulsating glow animation for signature in dark mode */
+@layer utilities {
+  /* Completely rewritten glow effect using proper filter chain */
+  .signature-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .signature-glow-image {
+    /* Convert black signature to the exact "color of infinite temperature" RGB(148, 177, 255) */
+    filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1000%) hue-rotate(198deg) brightness(105%)
+      contrast(101%);
+    animation: pulsate-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulsate-glow {
+    0%,
+    100% {
+      filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1000%) hue-rotate(198deg) brightness(105%)
+        contrast(101%) drop-shadow(0 0 8px rgb(148 177 255 / 0.7)) drop-shadow(0 0 16px rgb(148 177 255 / 0.5))
+        drop-shadow(0 0 24px rgb(148 177 255 / 0.3));
+    }
+    50% {
+      filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1000%) hue-rotate(198deg) brightness(105%)
+        contrast(101%) drop-shadow(0 0 20px rgb(148 177 255 / 1)) drop-shadow(0 0 40px rgb(148 177 255 / 0.8))
+        drop-shadow(0 0 60px rgb(148 177 255 / 0.5));
+    }
   }
 }
