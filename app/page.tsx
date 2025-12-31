@@ -36,15 +36,13 @@ export default function HomePage() {
             height={80}
             className="opacity-90 dark:hidden"
           />
-          <div className="hidden dark:block">
-            <Image
-              src="/signature-dark.jpg"
-              alt="Rusty Frank signature"
-              width={240}
-              height={80}
-              className="signature-glow"
-            />
-          </div>
+          <Image
+            src="/signature.png"
+            alt="Rusty Frank signature"
+            width={240}
+            height={80}
+            className="hidden dark:block signature-glow"
+          />
         </div>
 
         <div className="mt-12 pt-8 border-t border-border">
