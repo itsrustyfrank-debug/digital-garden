@@ -21,31 +21,32 @@ export default function HomePage() {
 
           <p>
             The organization is intentionally simple: an alphabetical index serves as the primary navigation. Browse by
-            topic, follow cross-references, or read linearly. There are no feeds, no comments, no analytics. Just a
-            space where my latest obsessions find a home, carefully cultivated for your enjoyment. In the everlasting
-            words of Joe Dirt, "Life's a garden, dig it."
+            topic, follow cross-references, or read linearly. There are no feeds, no comments, no analytics. Just an
+            ever-growing assortment of my latest fixations, cultivated for your enjoyment. In the wise words of Joe
+            Dirt, "Life's a garden, dig it."
           </p>
         </div>
 
         <div className="mt-8 flex flex-col items-start">
           <p className="text-lg text-foreground/80 italic mb-4">Warmly,</p>
-
-          {/* Light mode signature - standard black */}
-          <div className="dark:hidden">
-            <Image src="/signature.png" alt="Rusty Frank signature" width={240} height={80} className="opacity-90" />
-          </div>
-
-          {/* Dark mode signature - with pulsating glow effect */}
-          <div className="hidden dark:block relative">
-            <div className="signature-container">
-              <Image
-                src="/signature.png"
-                alt="Rusty Frank signature"
-                width={240}
-                height={80}
-                className="signature-glow-image"
-              />
-            </div>
+          <Image
+            src="/signature.png"
+            alt="Rusty Frank signature"
+            width={240}
+            height={80}
+            className="opacity-90 dark:hidden"
+          />
+          <div className="hidden dark:block signature-glow">
+            <Image
+              src="/signature-dark.jpg"
+              alt="Rusty Frank signature"
+              width={240}
+              height={80}
+              className="brightness-0 invert"
+              style={{
+                filter: "drop-shadow(0 0 12px rgb(148 177 255 / 0.8)) drop-shadow(0 0 24px rgb(148 177 255 / 0.4))",
+              }}
+            />
           </div>
         </div>
 
