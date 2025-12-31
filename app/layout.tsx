@@ -1,14 +1,15 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Carme as Charter, Inter } from "next/font/google"
+import { Lora, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 
-const charter = Charter({
+const lora = Lora({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-serif",
+  weight: ["400", "500", "600", "700"],
 })
 
 const inter = Inter({
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${charter.variable} ${inter.variable}`}>
+    <html lang="en" className={`${lora.variable} ${inter.variable}`}>
       <body className="antialiased">
         <Navigation />
         {children}
