@@ -29,20 +29,22 @@ export default function HomePage() {
 
         <div className="mt-8 flex flex-col items-start">
           <p className="text-lg text-foreground/80 italic mb-4">Warmly,</p>
-          <Image
-            src="/signature.png"
-            alt="Rusty Frank signature"
-            width={240}
-            height={80}
-            className="opacity-90 dark:hidden"
-          />
-          <Image
-            src="/signature.png"
-            alt="Rusty Frank signature"
-            width={240}
-            height={80}
-            className="hidden dark:block signature-glow"
-          />
+          <div className="py-8 px-12 -ml-12">
+            <Image
+              src="/signature.png"
+              alt="Rusty Frank signature"
+              width={240}
+              height={80}
+              className="opacity-90 dark:hidden"
+            />
+            <Image
+              src="/signature.png"
+              alt="Rusty Frank signature"
+              width={240}
+              height={80}
+              className="hidden dark:block signature-glow"
+            />
+          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border">
