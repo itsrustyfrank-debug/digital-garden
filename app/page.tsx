@@ -4,12 +4,14 @@ export default function HomePage() {
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
       <article className="prose prose-lg">
-        <h1 className="text-4xl font-normal leading-tight text-balance mb-8">A Digital Garden</h1>
+        <h1 className="text-4xl font-normal leading-tight text-balance mb-8">A Personal Encyclopedia</h1>
 
         <div className="leading-relaxed space-y-6 text-lg">
           <p>
-            This is a personal encyclopedia—a collection of notes, thoughts, and reference material arranged for reading
-            and reflection rather than chronological consumption.
+            Welcome to my digital garden. Here you will find 
+            a collection of notes, thoughts, and reference 
+            material arranged for reading and reflection 
+            rather than chronological consumption.
           </p>
 
           <p>
