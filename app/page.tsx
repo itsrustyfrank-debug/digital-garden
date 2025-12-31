@@ -36,16 +36,13 @@ export default function HomePage() {
             height={80}
             className="opacity-90 dark:hidden"
           />
-          <div className="hidden dark:block signature-glow">
+          <div className="hidden dark:block">
             <Image
               src="/signature-dark.jpg"
               alt="Rusty Frank signature"
               width={240}
               height={80}
-              className="brightness-0 invert"
-              style={{
-                filter: "drop-shadow(0 0 12px rgb(148 177 255 / 0.8)) drop-shadow(0 0 24px rgb(148 177 255 / 0.4))",
-              }}
+              className="signature-glow"
             />
           </div>
         </div>
